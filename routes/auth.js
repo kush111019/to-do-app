@@ -4,7 +4,14 @@ const { createClient } = require('@supabase/supabase-js');
 const User = require('../models/user');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const { SUPABASE_URL, SUPABASE_KEY } = process.env;
+require('dotenv').config(); // Ensure dotenv is loaded
+
+const SUPABASE_URL = process.env.SUPABASE_URL;
+const SUPABASE_KEY = process.env.SUPABASE_KEY;
+
+if (!SUPABASE_URL || !SUPABASE_KEY) {
+    throw new Error('SUPABASE_URL and SUPABASE_KEY must be defined');
+}
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 
