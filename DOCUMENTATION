@@ -46,4 +46,4 @@ Database Connections: Ensure MongoDB is properly configured and accessible.
 10. The project is successfully deployed on render https://dashboard.render.com/web/srv-cqjrhm0gph6c739d3c8g/settings
     you can view it their.
 
-
+11. The front end is also deployed on the Netlify https://app.netlify.com/sites/my-todo-kush-app/configuration/general
